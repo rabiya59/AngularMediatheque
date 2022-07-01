@@ -1,0 +1,56 @@
+<!--<div *ngIf="media.synopsis">
+  {{media.nom}}
+  {{media.real}}
+  {{media.annee }}
+  <img [src]="media.img" *ngIf="media.img !== ''">
+  <img src="https://data.pixiz.com/output/user/frame/preview/400x400/3/1/2/3/1413213_af8cd.jpg" *ngIf="media.img == ''">
+  {{media.synopsis | slice: 0:120}} ... 
+</div>
+
+<div *ngIf="!media.synopsis">
+    {{media.nom}}
+    {{media.real}}
+    {{media.annee }}
+   <img [src]="media.img" *ngIf="media.img !== ''" >
+   <img src="https://data.pixiz.com/output/user/frame/preview/400x400/3/1/2/3/1413213_af8cd.jpg" *ngIf="media.img == ''">  
+</div>-->
+
+<div class="card" *ngIf="media.synopsis">
+  <h3>Films</h3>
+  <div class="card-image"><img [src]="media.img" *ngIf="media.img !== ''"> <img
+      src="https://ds.static.rtbf.be/article/image/400x620/f/2/6/0532a151e5dae6d26839328ae58d341b-1536654712.jpg" *ngIf="media.img == ''">
+  </div>
+  <div class="card-body">
+    <div class="card-date">
+      <time>{{media.annee }}</time>
+    </div>
+    <div class="card-title">
+      <h3>{{media.nom}}</h3>
+      <p>{{media.real}} </p>
+    </div>
+    <div class="card-excerpt">
+      <p>{{media.synopsis | slice: 0:120}} ... </p>
+      
+    </div>
+  </div>
+</div>
+<div class="card-2" *ngIf="!media.synopsis">
+  <h3>Albums</h3>
+  <div class="card-image"><img [src]="media.img" *ngIf="media.img !== ''"> <img
+      src="https://data.pixiz.com/output/user/frame/preview/400x400/3/1/2/3/1413213_af8cd.jpg" *ngIf="media.img == ''">
+  </div>
+  <div class="card-body">
+    <div class="card-date">
+      <time>{{media.annee }}</time>
+    </div>
+    <div class="card-title">
+      <h3>{{media.nom}}</h3>
+      <p>{{media.real}} </p>
+    </div>   
+  </div>
+</div>
+
+
+
+
+
